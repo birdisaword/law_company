@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------
+  	[Contact]
+------------------------------------------------------------------*/
+
+.contact-list {
+	> li {
+		@include font($size: 13px);
+		color: $color-link;
+		margin-bottom: 10px;
+	}
+}
+.footer {
+	> div > div > .form > div > input {
+		border: solid lightgrey 1px;
+		border-radius: 5px;
+
+		&:focus {
+			border: solid grey 1px;
+		}
+	}
+
+	> div > div > .form > div > textarea {
+		border: solid rgba(0,0,0,0.2) 1px;
+		border-radius: 5px;
+
+		&:focus {
+			border: solid grey 1px;
+		}
+	}
+
+	> div > div > .form > .button {
+		background: lightgrey;
+		padding: 10px 20px;
+	}
+}
