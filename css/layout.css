@@ -170,6 +170,8 @@ h4 {
   color: #515769;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
+  padding-top: 8px;
 }
 
 .active-option, .accordion:hover {
@@ -755,7 +757,7 @@ li, li a {
   float: left;
   max-height: 95px;
   line-height: 65px;
-  margin: auto 72px
+  margin: auto 48px
 }
 
 .header .logo-wrap {
