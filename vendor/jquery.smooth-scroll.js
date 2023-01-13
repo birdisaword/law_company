@@ -147,7 +147,7 @@
   /************************************************
    * SCROLLING 
    ************************************************/
-   
+
   var que = [];
   var pending = false;
   var lastScroll = +new Date;
@@ -156,7 +156,7 @@
    * Pushes scroll actions to the scrolling queue.
    */
   function scrollArray(elem, left, top, delay) {
-      
+
       delay || (delay = 1000);
       directionCheck(left, top);
    
@@ -264,14 +264,14 @@
    * @param {Object} event
    */
   function wheel(event) {
-   
+
       if (!initDone) {
           init();
       }
       
       var target = event.target;
       var overflowing = overflowingAncestor(target);
-      
+
       // use default if there's no overflowing
       // element or default action is prevented    
       if (!overflowing || event.defaultPrevented ||
@@ -292,6 +292,8 @@
       if (!options.touchpadSupport && isTouchpad(deltaY)) {
           return true;
       }
+
+      
    
       // scale by step size
       // delta is 120 most of the time
@@ -304,9 +306,12 @@
       }
       
       scrollArray(overflowing, -deltaX, -deltaY);
-    //   event.preventDefault();
+      event.preventDefault();
+
   }
-   
+
+//   window.addEventListener(scrollArray, { passive: false });
+
   /**
    * Keydown event handler.
    * @param {Object} event
